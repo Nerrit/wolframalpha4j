@@ -29,7 +29,7 @@ public class FullResultsService extends RestService {
         super(router);
     }
 
-    private record Result(QueryResult queryResult) {}
+    private record Result(QueryResult queryresult) {}
 
     public Mono<QueryResult> query(String input) {
         return Routes.FULL_RESULT.newRequest()
@@ -37,7 +37,7 @@ public class FullResultsService extends RestService {
                 .query(INPUT, input)
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Format format) {
@@ -55,7 +55,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Location location) {
@@ -65,7 +65,7 @@ public class FullResultsService extends RestService {
                 .query(location.getParameterName(), location.getValue())
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Location location, Format format) {
@@ -84,7 +84,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Size size) {
@@ -97,7 +97,7 @@ public class FullResultsService extends RestService {
                 .query(MAG, size.mag())
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Size size, Format format) {
@@ -124,7 +124,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Size size, Location location) {
@@ -138,7 +138,7 @@ public class FullResultsService extends RestService {
                 .query(location.getParameterName(), location.getValue())
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Size size, Location location, Format format) {
@@ -161,7 +161,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Timeouts timeouts) {
@@ -176,7 +176,7 @@ public class FullResultsService extends RestService {
                 .query(ASYNC, timeouts.async())
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Timeouts timeouts, Format format) {
@@ -200,7 +200,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Timeouts timeouts, Location location) {
@@ -216,7 +216,7 @@ public class FullResultsService extends RestService {
                 .query(location.getParameterName(), location.getValue())
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Timeouts timeouts, Location location, Format format) {
@@ -241,7 +241,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Timeouts timeouts, Size size) {
@@ -260,7 +260,7 @@ public class FullResultsService extends RestService {
                 .query(MAG, size.mag())
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Timeouts timeouts, Size size, Format format) {
@@ -288,7 +288,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Timeouts timeouts, Location location, Size size) {
@@ -308,7 +308,7 @@ public class FullResultsService extends RestService {
                 .query(MAG, size.mag())
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Timeouts timeouts, Location location, Size size, Format format) {
@@ -337,7 +337,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString())
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Miscellaneous misc) {
@@ -346,7 +346,7 @@ public class FullResultsService extends RestService {
                 .query(INPUT, input)
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Miscellaneous misc, Format format) {
@@ -364,7 +364,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Timeouts timeouts, Miscellaneous misc) {
@@ -379,7 +379,7 @@ public class FullResultsService extends RestService {
                 .query(ASYNC, timeouts.async())
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Timeouts timeouts, Miscellaneous misc, Format format) {
@@ -403,7 +403,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Location location, Miscellaneous misc) {
@@ -413,7 +413,7 @@ public class FullResultsService extends RestService {
                 .query(location.getParameterName(), location.getValue())
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Location location, Miscellaneous misc, Format format) {
@@ -432,7 +432,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Size size, Miscellaneous misc) {
@@ -445,7 +445,7 @@ public class FullResultsService extends RestService {
                 .query(MAG, size.mag())
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Size size, Miscellaneous misc, Format format) {
@@ -467,7 +467,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Location location, Timeouts timeouts, Miscellaneous misc) {
@@ -483,7 +483,7 @@ public class FullResultsService extends RestService {
                 .query(ASYNC, timeouts.async())
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Location location, Timeouts timeouts, Miscellaneous misc, Format format) {
@@ -508,7 +508,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Location location, Size size, Miscellaneous misc) {
@@ -522,7 +522,7 @@ public class FullResultsService extends RestService {
                 .query(MAG, size.mag())
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Location location, Size size, Miscellaneous misc, Format format) {
@@ -545,7 +545,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Location location, Timeouts timeouts, Size size, Miscellaneous misc) {
@@ -565,7 +565,7 @@ public class FullResultsService extends RestService {
                 .query(MAG, size.mag())
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     public Mono<QueryResult> query(String input, Location location, Timeouts timeouts, Size size, Miscellaneous misc, Format format) {
@@ -594,7 +594,7 @@ public class FullResultsService extends RestService {
                 .query(FORMAT, format)
                 .query(OUTPUT, Format.JSON.toString()))
                 .exchange(getRouter())
-                .bodyToMono(Result.class).map(Result::queryResult);
+                .bodyToMono(Result.class).map(Result::queryresult);
     }
 
     private <T> String formatList(List<T> list) {

@@ -45,7 +45,7 @@ public record QueryResult(
         public record Subpod(
                 String title,
                 Image img,
-                List<Rect> imagemap,
+                ImageMap imagemap,
                 String plaintext,
                 String mathml,
                 String sound,
@@ -54,6 +54,8 @@ public record QueryResult(
                 List<Cell> cells,
                 List<State> states
         ) {
+
+            public record ImageMap(Rect rect) {}
 
             public record Image(
                     String src,
@@ -70,11 +72,14 @@ public record QueryResult(
             }
 
             public record Rect(
-                    int x,
-                    int y,
-                    int width,
-                    int height,
-                    String tooltiptext
+                    int left,
+                    int top,
+                    int right,
+                    int bottom,
+                    String query,
+                    String assumptions,
+                    String title,
+                    String type
             ) {
 
             }

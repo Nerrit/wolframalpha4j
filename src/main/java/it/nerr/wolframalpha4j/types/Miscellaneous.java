@@ -61,7 +61,7 @@ public class Miscellaneous {
         return webRequest;
     }
 
-    public class Builder {
+    public static class Builder {
 
             private boolean reinterpret;
             private boolean useReinterpret;
