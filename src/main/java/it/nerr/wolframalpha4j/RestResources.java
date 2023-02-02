@@ -1,9 +1,8 @@
 package it.nerr.wolframalpha4j;
 
-import it.nerr.wolframalpha4j.route.Router;
-import it.nerr.wolframalpha4j.util.JacksonResources;
-import it.nerr.wolframalpha4j.util.ReactorResources;
-import it.nerr.wolframalpha4j.util.TokenUtil;
+import it.nerr.simpleapi.route.Router;
+import it.nerr.simpleapi.util.JacksonResources;
+import it.nerr.simpleapi.util.ReactorResources;
 
 public class RestResources {
 
@@ -27,7 +26,7 @@ public class RestResources {
         this.reactorResources = reactorResources;
         this.jacksonResources = jacksonResources;
         this.router = router;
-        this.selfId = token;//TokenUtil.getSelfId(token);
+        this.selfId = token;
     }
 
     /**

@@ -1,17 +1,16 @@
 package it.nerr.wolframalpha4j;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import it.nerr.wolframalpha4j.http.ExchangeStrategies;
-import it.nerr.wolframalpha4j.request.*;
-import it.nerr.wolframalpha4j.response.ResponseFunction;
-import it.nerr.wolframalpha4j.route.Route;
-import it.nerr.wolframalpha4j.route.Router;
+import it.nerr.simpleapi.http.ExchangeStrategies;
+import it.nerr.simpleapi.request.*;
+import it.nerr.simpleapi.response.ResponseFunction;
+import it.nerr.simpleapi.route.Route;
+import it.nerr.simpleapi.route.Router;
 import it.nerr.wolframalpha4j.route.Routes;
-import it.nerr.wolframalpha4j.sinks.EmissionStrategy;
-import it.nerr.wolframalpha4j.util.JacksonResources;
-import it.nerr.wolframalpha4j.util.ReactorResources;
+import it.nerr.simpleapi.sinks.EmissionStrategy;
+import it.nerr.simpleapi.util.JacksonResources;
+import it.nerr.simpleapi.util.ReactorResources;
 import reactor.netty.http.client.HttpClient;
-import reactor.util.annotation.Nullable;
 
 import java.time.Duration;
 import java.util.ArrayList;

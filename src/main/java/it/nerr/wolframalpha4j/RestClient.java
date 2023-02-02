@@ -1,7 +1,7 @@
 package it.nerr.wolframalpha4j;
 
-import it.nerr.wolframalpha4j.request.RouterOptions;
-import it.nerr.wolframalpha4j.route.Router;
+import it.nerr.simpleapi.request.RouterOptions;
+import it.nerr.simpleapi.route.Router;
 import it.nerr.wolframalpha4j.service.FullResultsService;
 import it.nerr.wolframalpha4j.service.ShortAnswerService;
 import it.nerr.wolframalpha4j.service.SimpleService;

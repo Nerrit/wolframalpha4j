@@ -1,6 +1,6 @@
 package it.nerr.wolframalpha4j.types;
 
-import it.nerr.wolframalpha4j.request.WebRequest;
+import it.nerr.simpleapi.request.WebRequest;
 
 public class Miscellaneous {
 

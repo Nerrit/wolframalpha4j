@@ -1,5 +1,7 @@
 package it.nerr.wolframalpha4j.route;
 
+import it.nerr.simpleapi.route.Route;
+
 public abstract class Routes {
 
     public static final String BASE_URL = "https://api.wolframalpha.com";

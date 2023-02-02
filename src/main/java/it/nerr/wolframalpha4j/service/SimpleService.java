@@ -1,6 +1,7 @@
 package it.nerr.wolframalpha4j.service;
 
-import it.nerr.wolframalpha4j.route.Router;
+import it.nerr.simpleapi.route.Router;
+import it.nerr.simpleapi.service.RestService;
 import it.nerr.wolframalpha4j.types.Color;
 import it.nerr.wolframalpha4j.types.Layout;
 import it.nerr.wolframalpha4j.types.Units;
